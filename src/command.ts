@@ -4,7 +4,7 @@ export interface CommandDetails {
 }
 
 export class Command {
-  private matcher: RegExp = /^\/([\w]+)\b *(.*)?$/m;
+  private matcher: RegExp = /^\/([a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*) *(.*)?$/m;
 
   constructor(readonly name: string) {
   }
